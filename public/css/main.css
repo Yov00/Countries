@@ -1,0 +1,79 @@
+#showGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+}
+
+#showGrid>div {
+    padding: 10px;
+    text-align: center;
+    border: 2px solid lightcoral;
+    transition: .3s;
+}
+
+#showGrid div:first-child {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+#showGrid>div:hover {
+    transform: scale(1.02);
+}
+
+.countryProperties {
+    font-size: 25px;
+    color: #333;
+}
+
+#searchInput {
+    width: 20%;
+    transition: .5s;
+}
+
+#searchInput:focus {
+    width: 40%;
+}
+
+.searchBar {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    padding: 0 200px;
+}
+
+.updatedBox {
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #6FCF97;
+    font-size:40px;
+    border-radius:10px;
+    font-weight: bold;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-transform:capitalize;
+    color: white;
+    width: 500px;
+    height: 300px;
+    
+   
+  
+    animation-name: fadeAway;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-delay: 1s;
+    animation-duration: 5s;
+}
+
+@keyframes fadeAway {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
