@@ -15,7 +15,7 @@ class CountryController extends Controller
         $title = "Home";
         $orderByValue = 'asc';
         $orderByKey = 'name';
-        $check = 'not updated';
+        $isItUpdated = 'not updated';
         // Sorting filters logic
         if (request('name')) {
             $orderByValue = request('name');
@@ -29,8 +29,8 @@ class CountryController extends Controller
 
         // updated comparison
         if (strtotime($countries->first()->updated) < strtotime('-2 minutes')) {
-            $check = "updated";
-        // Clear countries talbe in the DB
+            $isItUpdated = "updated";
+        // Clear countr~es talbe in the DB
             Country::truncate();
 
             $client = new Client();
@@ -55,7 +55,7 @@ class CountryController extends Controller
                 'countries' => $countries,
                 'orderByValue' => $orderByValue,
                 'orderByKey' =>  $orderByKey,
-                'check' => $check
+                'isItUpdated' => $isItUpdated
             ]);
         } else {
             $countries = Country::orderBy($orderByKey, $orderByValue)->get();
@@ -64,7 +64,7 @@ class CountryController extends Controller
                 'countries' => $countries,
                 'orderByValue' => $orderByValue,
                 'orderByKey' =>  $orderByKey,
-                'check' => $check = 'not updated'
+                'isItUpdated' => $isItUpdated
             ]);
         }
     }

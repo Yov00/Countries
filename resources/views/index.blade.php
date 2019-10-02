@@ -2,8 +2,8 @@
 
 
 @section('content')
-<div class="updatedBox" style="{{$check == 'not updated'? 'background-color:tomato':''}}">
-    {{$check}}
+<div class="updatedBox" style="{{$isItUpdated == 'not updated'? 'background-color:tomato':''}}">
+    {{$isItUpdated}}
 
 </div>
     <table class="table" style="width:80%;margin:0px auto;">

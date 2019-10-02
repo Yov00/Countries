@@ -58,13 +58,15 @@
     color: white;
     width: 500px;
     height: 300px;
-    
+    box-shadow: 
+        inset 0px 11px 82px -10px #CCC,
+        inset 0px 11px 82px -10px #CCC;
    
   
     animation-name: fadeAway;
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
-    animation-delay: 1s;
+    animation-delay: 3s;
     animation-duration: 5s;
 }
 
